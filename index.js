@@ -39,7 +39,10 @@ create({
 					"removeComments": true,
 					"sourceMap": true,
 					"outDir": "build",
-					"typeRoots": ["node_modules/go-liter-plugin"],
+					"typeRoots": [
+						"node_modules/@types",
+						"node_modules/go-liter-plugin",
+					],
 				},
 				"include": [
 					"src",
