@@ -1,0 +1,19 @@
+{
+  "name": "create-glp",
+  "version": "1.0.1",
+  "description": "Create go liter plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/litermc/create-glp.git"
+  },
+  "author": "zyxkad",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/litermc/create-glp/issues"
+  },
+  "homepage": "https://github.com/litermc/create-glp#readme"
+}
