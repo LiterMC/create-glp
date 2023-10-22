@@ -4,7 +4,7 @@ const create = require("base-create");
 
 create({
 	dependencies: [
-		"go-liter-plugin": "^1.0.0",
+		"go-liter-plugin",
 	],
 	devDependencies: [
 		"typescript",
