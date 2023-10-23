@@ -151,7 +151,7 @@ fs.writeFileSync('build/plugin.meta.json', JSON.stringify(meta), 'utf-8')
 		{
 			path: "src/index.ts",
 			contents: `
-console.log(console.log(\`plugin ${$.ID}@${$.VERSION} is loading\`))
+console.log(console.log(\`plugin \${$.ID}@\${$.VERSION} is loading\`))
 
 $.on('unload', () => {
 	console.log('plugin %q is unloading', $.ID)
