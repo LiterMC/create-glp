@@ -101,7 +101,7 @@ jspm_packages/
 .yarn/install-state.gz
 .pnp.*
 `
-		}
+		},
 		{
 			path: "tsconfig.json",
 			contents: {
