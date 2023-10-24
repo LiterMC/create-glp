@@ -12,21 +12,52 @@ create({
 		"npm-build-zip",
 	],
 	package: {
+		description: "A go-liter plugin",
 		files: ["dist"],
 		main: "index.js",
 		types: "index.d.ts",
 		keywords: ["go-liter"],
 		scripts: {
-	    "test": "tsc --noEmit",
-	    "export-meta": "node cmd/export-meta",
-	    "zip": "npm-build-zip --destination=dist",
-	    "build": "npm run export-meta && npm run build:types && npm run build:ts && npm run zip",
-	    "build:ts": "tsc",
-	    "build:types": "tsc --emitDeclarationOnly",
-	    "build:watch": "npm run build -- --watch"
-	  },
+			"test": "tsc --noEmit",
+			"export-meta": "node cmd/export-meta",
+			"zip": "npm-build-zip --destination=dist",
+			"build": "npm run export-meta && npm run build:types && npm run build:ts && npm run zip",
+			"build:ts": "tsc",
+			"build:types": "tsc --emitDeclarationOnly",
+			"build:watch": "npm run build -- --watch"
+		},
 	},
 	files: [
+		{
+			path: "README.md",
+			// `contents` can be a function
+			contents: ({ nameWithScope, nameWithoutScope, dirName }) => `
+# ${nameWithScope}
+
+A go-liter plugin
+
+
+## Commands
+
+### Setup
+
+\`\`\`sh
+npm install
+\`\`\`
+
+### Test
+
+\`\`\`sh
+npm run test
+\`\`\`
+
+### Build & Pack
+
+\`\`\`sh
+npm run build
+\`\`\`
+`,
+		},
 		{
 			path: ".gitignore",
 			contents: `
@@ -109,6 +140,8 @@ jspm_packages/
 					"module": "commonjs",
 					"target": "es6",
 					"lib": ["es6"],
+					"allowJs": true,
+					"checkJs": true,
 					"declaration": true,
 					"noImplicitAny": true,
 					"preserveConstEnums": true,
